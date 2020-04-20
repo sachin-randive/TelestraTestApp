@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03350F66244C13BE0022396D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F65244C13BE0022396D /* AppDelegate.swift */; };
-		03350F6A244C13BE0022396D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F69244C13BE0022396D /* ViewController.swift */; };
+		03350F6A244C13BE0022396D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F69244C13BE0022396D /* MainViewController.swift */; };
 		03350F70244C13BE0022396D /* TelestraTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03350F6E244C13BE0022396D /* TelestraTestApp.xcdatamodeld */; };
 		03350F72244C13BE0022396D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03350F71244C13BE0022396D /* Assets.xcassets */; };
 		03350F75244C13BE0022396D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03350F73244C13BE0022396D /* LaunchScreen.storyboard */; };
@@ -18,8 +18,6 @@
 		03350FA1244C1C7B0022396D /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FA0244C1C7B0022396D /* CustomTableCell.swift */; };
 		03350FA3244C1D070022396D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FA2244C1D070022396D /* ServiceManager.swift */; };
 		03350FA5244C20080022396D /* TTAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FA4244C20080022396D /* TTAppConfig.swift */; };
-		03350FA7244C203D0022396D /* TTActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FA6244C203D0022396D /* TTActivityIndicatorView.swift */; };
-		03350FA9244C20840022396D /* TTActivityIndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FA8244C20840022396D /* TTActivityIndicatorStyle.swift */; };
 		03350FAB244C23800022396D /* TTUIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAA244C23800022396D /* TTUIColorExtension.swift */; };
 		03350FAD244C23F70022396D /* TTUIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAC244C23F70022396D /* TTUIImageViewExtension.swift */; };
 		03350FAF244C241A0022396D /* TTUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAE244C241A0022396D /* TTUIViewExtension.swift */; };
@@ -45,7 +43,7 @@
 /* Begin PBXFileReference section */
 		03350F62244C13BE0022396D /* TelestraTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelestraTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03350F65244C13BE0022396D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03350F69244C13BE0022396D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03350F69244C13BE0022396D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		03350F6F244C13BE0022396D /* TelestraTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TelestraTestApp.xcdatamodel; sourceTree = "<group>"; };
 		03350F71244C13BE0022396D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03350F74244C13BE0022396D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +58,6 @@
 		03350FA0244C1C7B0022396D /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		03350FA2244C1D070022396D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		03350FA4244C20080022396D /* TTAppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAppConfig.swift; sourceTree = "<group>"; };
-		03350FA6244C203D0022396D /* TTActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTActivityIndicatorView.swift; sourceTree = "<group>"; };
-		03350FA8244C20840022396D /* TTActivityIndicatorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTActivityIndicatorStyle.swift; sourceTree = "<group>"; };
 		03350FAA244C23800022396D /* TTUIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIColorExtension.swift; sourceTree = "<group>"; };
 		03350FAC244C23F70022396D /* TTUIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIImageViewExtension.swift; sourceTree = "<group>"; };
 		03350FAE244C241A0022396D /* TTUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIViewExtension.swift; sourceTree = "<group>"; };
@@ -165,7 +161,7 @@
 		03350F9A244C14FF0022396D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				03350F69244C13BE0022396D /* ViewController.swift */,
+				03350F69244C13BE0022396D /* MainViewController.swift */,
 				03350FA2244C1D070022396D /* ServiceManager.swift */,
 			);
 			path = Controller;
@@ -175,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				03350FA4244C20080022396D /* TTAppConfig.swift */,
-				03350FA6244C203D0022396D /* TTActivityIndicatorView.swift */,
-				03350FA8244C20840022396D /* TTActivityIndicatorStyle.swift */,
 				03350FAA244C23800022396D /* TTUIColorExtension.swift */,
 				03350FAC244C23F70022396D /* TTUIImageViewExtension.swift */,
 				03350FAE244C241A0022396D /* TTUIViewExtension.swift */,
@@ -314,16 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03350F6A244C13BE0022396D /* ViewController.swift in Sources */,
+				03350F6A244C13BE0022396D /* MainViewController.swift in Sources */,
 				03350F70244C13BE0022396D /* TelestraTestApp.xcdatamodeld in Sources */,
 				03350F66244C13BE0022396D /* AppDelegate.swift in Sources */,
 				03350FAB244C23800022396D /* TTUIColorExtension.swift in Sources */,
 				03350FA5244C20080022396D /* TTAppConfig.swift in Sources */,
 				03350F9F244C1AB50022396D /* UserModel.swift in Sources */,
 				03350FAF244C241A0022396D /* TTUIViewExtension.swift in Sources */,
-				03350FA7244C203D0022396D /* TTActivityIndicatorView.swift in Sources */,
 				03350FAD244C23F70022396D /* TTUIImageViewExtension.swift in Sources */,
-				03350FA9244C20840022396D /* TTActivityIndicatorStyle.swift in Sources */,
 				03350FA3244C1D070022396D /* ServiceManager.swift in Sources */,
 				03350FA1244C1C7B0022396D /* CustomTableCell.swift in Sources */,
 			);

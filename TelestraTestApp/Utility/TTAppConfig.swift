@@ -9,7 +9,7 @@
 import UIKit
 
 struct TTAppConfig {
-
-     let authoriseBaseURL = "https:dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
-
+    
+    let authoriseBaseURL = "https:dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+    
 }
