@@ -30,6 +30,6 @@ class ServiceManager {
                     completion(nil, error)
                 }
             }
-            }.resume()
+        }.resume()
     }
 }

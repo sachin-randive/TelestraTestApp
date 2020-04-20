@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03350F66244C13BE0022396D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F65244C13BE0022396D /* AppDelegate.swift */; };
 		03350F6A244C13BE0022396D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F69244C13BE0022396D /* MainViewController.swift */; };
-		03350F70244C13BE0022396D /* TelestraTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03350F6E244C13BE0022396D /* TelestraTestApp.xcdatamodeld */; };
 		03350F72244C13BE0022396D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03350F71244C13BE0022396D /* Assets.xcassets */; };
 		03350F75244C13BE0022396D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03350F73244C13BE0022396D /* LaunchScreen.storyboard */; };
 		03350F80244C13BE0022396D /* TelestraTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350F7F244C13BE0022396D /* TelestraTestAppTests.swift */; };
@@ -44,7 +43,6 @@
 		03350F62244C13BE0022396D /* TelestraTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelestraTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03350F65244C13BE0022396D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03350F69244C13BE0022396D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		03350F6F244C13BE0022396D /* TelestraTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TelestraTestApp.xcdatamodel; sourceTree = "<group>"; };
 		03350F71244C13BE0022396D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03350F74244C13BE0022396D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03350F76244C13BE0022396D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				03350F71244C13BE0022396D /* Assets.xcassets */,
 				03350F73244C13BE0022396D /* LaunchScreen.storyboard */,
 				03350F76244C13BE0022396D /* Info.plist */,
-				03350F6E244C13BE0022396D /* TelestraTestApp.xcdatamodeld */,
 			);
 			path = TelestraTestApp;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03350F6A244C13BE0022396D /* MainViewController.swift in Sources */,
-				03350F70244C13BE0022396D /* TelestraTestApp.xcdatamodeld in Sources */,
 				03350F66244C13BE0022396D /* AppDelegate.swift in Sources */,
 				03350FAB244C23800022396D /* TTUIColorExtension.swift in Sources */,
 				03350FA5244C20080022396D /* TTAppConfig.swift in Sources */,
@@ -368,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -414,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -468,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -482,7 +480,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TelestraTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -501,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TelestraTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -638,19 +634,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		03350F6E244C13BE0022396D /* TelestraTestApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				03350F6F244C13BE0022396D /* TelestraTestApp.xcdatamodel */,
-			);
-			currentVersion = 03350F6F244C13BE0022396D /* TelestraTestApp.xcdatamodel */;
-			path = TelestraTestApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 03350F5A244C13BE0022396D /* Project object */;
 }
