@@ -12,5 +12,4 @@ import UIKit
 extension UIColor {
 
     static let themeColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
-    
 }

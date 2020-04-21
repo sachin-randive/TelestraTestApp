@@ -23,13 +23,6 @@ class MainViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
-        
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        tableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
-//        tableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
-//        tableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
         tableView.register(CustomTableCell.self, forCellReuseIdentifier: TTAppConfig.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self

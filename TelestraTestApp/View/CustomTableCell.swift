@@ -59,7 +59,6 @@ class CustomTableCell: UITableViewCell {
         lblDescription.anchor(top: lblName.bottomAnchor, left: imgProfileName.rightAnchor, bottom: bottomAnchor, right: rightAnchor, enableInsets: false)
         lblDescription.anchorSize(width: frame.size.width, height: CGFloat(TTAppConfig.zero))
         
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
