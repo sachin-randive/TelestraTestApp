@@ -13,24 +13,26 @@ class CustomTableCell: UITableViewCell {
     //MARK: - Outlets
     
     private let lblName : UILabel = {
+        
         let lbl = UILabel()
-        lbl.textColor = UIColor.titleColor
-        lbl.font = UIFont(name: "Helvetica-bold", size: 18)
+        lbl.textColor = .black
+        lbl.font = UIFont(name: TTAppConfig.customFontBold, size: CGFloat(TTAppConfig.titleFontSize))
         lbl.textAlignment = .left
         return lbl
     }()
     
     private let lblDescription : UILabel = {
+        
         let lbl = UILabel()
         lbl.textColor = .black
-        lbl.font = UIFont(name: "Helvetica", size: 15)
+        lbl.font = UIFont(name: TTAppConfig.customFont, size: CGFloat(TTAppConfig.descFontSize))
         lbl.textAlignment = .left
         lbl.lineBreakMode = NSLineBreakMode.byTruncatingTail
         lbl.numberOfLines = 0
         return lbl
     }()
     
-    private let imgNamae : UIImageView = {
+    private let imgProfileName : UIImageView = {
         let imgView = UIImageView(image: #imageLiteral(resourceName: "placeholder"))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = false
@@ -40,26 +42,36 @@ class CustomTableCell: UITableViewCell {
     //MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = UIColor.themeColor
         addSubview(lblName)
         addSubview(lblDescription)
-        addSubview(imgNamae)
+        addSubview(imgProfileName)
         
-        imgNamae.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 0, width: 90, height: 90, enableInsets: false)
-        lblName.anchor(top: topAnchor, left: imgNamae.rightAnchor, bottom: nil, right: rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10, width: frame.size.width, height: 0, enableInsets: false)
-        lblDescription.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
-        lblDescription.anchor(top: lblName.bottomAnchor, left: imgNamae.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10, width: frame.size.width, height: 0, enableInsets: false)
+        imgProfileName.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, enableInsets: false)
+        imgProfileName.anchorSize(width: CGFloat(TTAppConfig.imageViewWidth), height: CGFloat(TTAppConfig.imageViewHeight))
+        
+        lblName.anchor(top: topAnchor, left: imgProfileName.rightAnchor, bottom: nil, right: rightAnchor, enableInsets: false)
+        imgProfileName.anchorSize(width: frame.size.width, height: CGFloat(TTAppConfig.zero))
+        
+        lblDescription.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(TTAppConfig.heightConstant)).isActive = true
+        lblDescription.anchor(top: lblName.bottomAnchor, left: imgProfileName.rightAnchor, bottom: bottomAnchor, right: rightAnchor, enableInsets: false)
+        lblDescription.anchorSize(width: frame.size.width, height: CGFloat(TTAppConfig.zero))
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - setCellInformation methods
     
     func setCellInformation(row: Row) {
-        imgNamae.imageFromServerURL(row.imageHref ?? "", placeHolder: #imageLiteral(resourceName: "placeholder"))
+        
+        imgProfileName.imageFromServerURL(row.imageHref ?? "", placeHolder: #imageLiteral(resourceName: "placeholder"))
         lblName.text = row.title
         lblDescription.text = row.rowDescription
     }

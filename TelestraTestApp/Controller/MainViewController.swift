@@ -12,7 +12,6 @@ class MainViewController: UITableViewController {
     
     //MARK: - Parameters
     
-    let cellIndentifier = "CustomMainCell"
     var listOfArray : [Row]  = [Row]()
     var activityView: UIActivityIndicatorView?
     
@@ -24,13 +23,26 @@ class MainViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         tableView.refreshControl = refreshControl
-        tableView.register(CustomTableCell.self, forCellReuseIdentifier: cellIndentifier)
+        
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+//        tableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
+//        tableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
+//        tableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        tableView.register(CustomTableCell.self, forCellReuseIdentifier: TTAppConfig.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor.themeColor
         self.tableView.tableFooterView = UIView()
         self.navigationController?.navigationBar.barTintColor = UIColor.themeColor
+        NSLayoutConstraint.activate([
+               tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+               tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+               tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+               tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+           ])
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -94,7 +106,7 @@ extension MainViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIndentifier, for: indexPath) as? CustomTableCell else { return CustomTableCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TTAppConfig.cellIdentifier, for: indexPath) as? CustomTableCell else { return CustomTableCell() }
         let currentLastItem = listOfArray[indexPath.row]
         cell.setCellInformation(row: currentLastItem)
         cell.selectionStyle = .none
@@ -108,6 +120,10 @@ extension MainViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
