@@ -1,15 +1,15 @@
 //
 //  TelestraTestAppTests.swift
-//  TelestraTestAppTests
+//  TelstraTestAppTests
 //
 //  Created by Sachin Randive on 19/04/20.
 //  Copyright © 2020 Sachin Randive. All rights reserved.
 //
 
 import XCTest
-@testable import TelestraTestApp
+@testable import TelstraTestApp
 
-class TelestraTestAppTests: XCTestCase {
+class TelstraTestAppTests: XCTestCase {
     
     var testSession: URLSession!
     

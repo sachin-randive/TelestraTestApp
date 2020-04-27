@@ -1,6 +1,6 @@
 //
 //  ServiceManager.swift
-//  TelestraTestApp
+//  TelstraTestApp
 //
 //  Created by Sachin Randive on 19/04/20.
 //  Copyright © 2020 Sachin Randive. All rights reserved.
