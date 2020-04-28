@@ -1,8 +1,8 @@
 //
-//  TelestraTestAppTests.swift
+//  TelstraTestAppTests.swift
 //  TelstraTestAppTests
 //
-//  Created by Sachin Randive on 19/04/20.
+//  Created by Sachin Randive on 28/04/20.
 //  Copyright © 2020 Sachin Randive. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import XCTest
 @testable import TelstraTestApp
 
 class TelstraTestAppTests: XCTestCase {
-    
-    var testSession: URLSession!
+
+   var testSession: URLSession!
     
     override func setUp() {
         super.setUp()
@@ -51,7 +51,6 @@ class TelstraTestAppTests: XCTestCase {
         wait(for: [promise], timeout: 10)
     }
 
-
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -63,4 +62,5 @@ class TelstraTestAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 }
