@@ -9,11 +9,8 @@
 import Foundation
 
 class ServiceManager {
-    
     static let shared = ServiceManager()
-    
     func requestForAPIData(completion: @escaping (UserModel?, Error?) -> Void) {
-        
         guard let serviceURL = URL.init(string: TTAppConfig().authoriseBaseURL) else { return }
         URLSession.shared.dataTask(with: serviceURL) { (data, response, error) in
             if let err = error {

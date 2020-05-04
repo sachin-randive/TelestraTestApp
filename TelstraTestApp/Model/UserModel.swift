@@ -9,18 +9,16 @@
 import Foundation
 
 // MARK: - UserModel
-struct UserModel: Codable {
-    
+struct UserModel: Decodable {
     let title: String
     let rows: [Row]
 }
 
 // MARK: - Row
 struct Row: Codable {
-    
     let title, rowDescription: String?
     let imageHref: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case rowDescription = "description"

@@ -10,15 +10,14 @@ import XCTest
 @testable import TelstraTestApp
 
 class TelstraTestAppTests: XCTestCase {
-
-   var testSession: URLSession!
+    var testSession: URLSession!
     
     override func setUp() {
         super.setUp()
         testSession = URLSession(configuration: .default)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDown() {
         testSession = nil
         super.tearDown()
@@ -50,17 +49,4 @@ class TelstraTestAppTests: XCTestCase {
         // 3
         wait(for: [promise], timeout: 10)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

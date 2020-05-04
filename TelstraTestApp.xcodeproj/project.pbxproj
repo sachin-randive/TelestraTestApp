@@ -19,10 +19,19 @@
 		03350FAB244C23800022396D /* TTUIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAA244C23800022396D /* TTUIColorExtension.swift */; };
 		03350FAD244C23F70022396D /* TTUIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAC244C23F70022396D /* TTUIImageViewExtension.swift */; };
 		03350FAF244C241A0022396D /* TTUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03350FAE244C241A0022396D /* TTUIViewExtension.swift */; };
+		034FB2F524604E0C004269D5 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FB2F424604E0C004269D5 /* DataViewModel.swift */; };
+		034FB2FD24606A69004269D5 /* TelstraTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FB2FC24606A69004269D5 /* TelstraTestAppUITests.swift */; };
 		038570B1245808AE0085CA42 /* TelstraTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038570B0245808AE0085CA42 /* TelstraTestAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		034FB2FF24606A69004269D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03350F5A244C13BE0022396D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03350F61244C13BE0022396D;
+			remoteInfo = TelstraTestApp;
+		};
 		038570B3245808AE0085CA42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03350F5A244C13BE0022396D /* Project object */;
@@ -47,6 +56,10 @@
 		03350FAA244C23800022396D /* TTUIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIColorExtension.swift; sourceTree = "<group>"; };
 		03350FAC244C23F70022396D /* TTUIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIImageViewExtension.swift; sourceTree = "<group>"; };
 		03350FAE244C241A0022396D /* TTUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTUIViewExtension.swift; sourceTree = "<group>"; };
+		034FB2F424604E0C004269D5 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		034FB2FA24606A69004269D5 /* TelstraTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstraTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		034FB2FC24606A69004269D5 /* TelstraTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraTestAppUITests.swift; sourceTree = "<group>"; };
+		034FB2FE24606A69004269D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038570AE245808AE0085CA42 /* TelstraTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstraTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038570B0245808AE0085CA42 /* TelstraTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraTestAppTests.swift; sourceTree = "<group>"; };
 		038570B2245808AE0085CA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +67,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		03350F5F244C13BE0022396D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034FB2F724606A69004269D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,9 +93,9 @@
 		03350F59244C13BE0022396D = {
 			isa = PBXGroup;
 			children = (
-				030912AB2456C5C000DC6CD1 /* Default-568h@2x.png */,
 				03350F64244C13BE0022396D /* TelstraTestApp */,
 				038570AF245808AE0085CA42 /* TelstraTestAppTests */,
+				034FB2FB24606A69004269D5 /* TelstraTestAppUITests */,
 				03350F63244C13BE0022396D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +105,7 @@
 			children = (
 				03350F62244C13BE0022396D /* TelstraTestApp.app */,
 				038570AE245808AE0085CA42 /* TelstraTestAppTests.xctest */,
+				034FB2FA24606A69004269D5 /* TelstraTestAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +116,13 @@
 				03350F65244C13BE0022396D /* AppDelegate.swift */,
 				03350F99244C14E80022396D /* Model */,
 				03350F98244C14D50022396D /* View */,
-				03350F9A244C14FF0022396D /* Controller */,
+				034FB2F324604D4F004269D5 /* ViewModel */,
+				034FB2F224604D03004269D5 /* Service */,
 				03350F9B244C15120022396D /* Utility */,
 				03350F71244C13BE0022396D /* Assets.xcassets */,
 				03350F73244C13BE0022396D /* LaunchScreen.storyboard */,
 				03350F76244C13BE0022396D /* Info.plist */,
+				030912AB2456C5C000DC6CD1 /* Default-568h@2x.png */,
 			);
 			path = TelstraTestApp;
 			sourceTree = "<group>";
@@ -107,6 +130,7 @@
 		03350F98244C14D50022396D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03350F69244C13BE0022396D /* MainViewController.swift */,
 				03350FA0244C1C7B0022396D /* CustomTableCell.swift */,
 			);
 			path = View;
@@ -120,15 +144,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		03350F9A244C14FF0022396D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				03350F69244C13BE0022396D /* MainViewController.swift */,
-				03350FA2244C1D070022396D /* ServiceManager.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		03350F9B244C15120022396D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +153,31 @@
 				03350FAE244C241A0022396D /* TTUIViewExtension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		034FB2F224604D03004269D5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03350FA2244C1D070022396D /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		034FB2F324604D4F004269D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				034FB2F424604E0C004269D5 /* DataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		034FB2FB24606A69004269D5 /* TelstraTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				034FB2FC24606A69004269D5 /* TelstraTestAppUITests.swift */,
+				034FB2FE24606A69004269D5 /* Info.plist */,
+			);
+			path = TelstraTestAppUITests;
 			sourceTree = "<group>";
 		};
 		038570AF245808AE0085CA42 /* TelstraTestAppTests */ = {
@@ -169,6 +209,24 @@
 			productReference = 03350F62244C13BE0022396D /* TelstraTestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		034FB2F924606A69004269D5 /* TelstraTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034FB30324606A69004269D5 /* Build configuration list for PBXNativeTarget "TelstraTestAppUITests" */;
+			buildPhases = (
+				034FB2F624606A69004269D5 /* Sources */,
+				034FB2F724606A69004269D5 /* Frameworks */,
+				034FB2F824606A69004269D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				034FB30024606A69004269D5 /* PBXTargetDependency */,
+			);
+			name = TelstraTestAppUITests;
+			productName = TelstraTestAppUITests;
+			productReference = 034FB2FA24606A69004269D5 /* TelstraTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		038570AD245808AE0085CA42 /* TelstraTestAppTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 038570B5245808AE0085CA42 /* Build configuration list for PBXNativeTarget "TelstraTestAppTests" */;
@@ -193,12 +251,16 @@
 		03350F5A244C13BE0022396D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Sachin Randive";
 				TargetAttributes = {
 					03350F61244C13BE0022396D = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					034FB2F924606A69004269D5 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 03350F61244C13BE0022396D;
 					};
 					038570AD245808AE0085CA42 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -221,6 +283,7 @@
 			targets = (
 				03350F61244C13BE0022396D /* TelstraTestApp */,
 				038570AD245808AE0085CA42 /* TelstraTestAppTests */,
+				034FB2F924606A69004269D5 /* TelstraTestAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +296,13 @@
 				03350F75244C13BE0022396D /* LaunchScreen.storyboard in Resources */,
 				03350F72244C13BE0022396D /* Assets.xcassets in Resources */,
 				030912AC2456C5C000DC6CD1 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034FB2F824606A69004269D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +324,20 @@
 				03350F66244C13BE0022396D /* AppDelegate.swift in Sources */,
 				03350FAB244C23800022396D /* TTUIColorExtension.swift in Sources */,
 				03350FA5244C20080022396D /* TTAppConfig.swift in Sources */,
+				034FB2F524604E0C004269D5 /* DataViewModel.swift in Sources */,
 				03350F9F244C1AB50022396D /* UserModel.swift in Sources */,
 				03350FAF244C241A0022396D /* TTUIViewExtension.swift in Sources */,
 				03350FAD244C23F70022396D /* TTUIImageViewExtension.swift in Sources */,
 				03350FA3244C1D070022396D /* ServiceManager.swift in Sources */,
 				03350FA1244C1C7B0022396D /* CustomTableCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034FB2F624606A69004269D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034FB2FD24606A69004269D5 /* TelstraTestAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +352,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		034FB30024606A69004269D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03350F61244C13BE0022396D /* TelstraTestApp */;
+			targetProxy = 034FB2FF24606A69004269D5 /* PBXContainerItemProxy */;
+		};
 		038570B4245808AE0085CA42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03350F61244C13BE0022396D /* TelstraTestApp */;
@@ -452,6 +536,44 @@
 			};
 			name = Release;
 		};
+		034FB30124606A69004269D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelstraTestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = techM.TelstraTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelstraTestApp;
+			};
+			name = Debug;
+		};
+		034FB30224606A69004269D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelstraTestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = techM.TelstraTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelstraTestApp;
+			};
+			name = Release;
+		};
 		038570B6245808AE0085CA42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +633,15 @@
 			buildConfigurations = (
 				03350F90244C13BE0022396D /* Debug */,
 				03350F91244C13BE0022396D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034FB30324606A69004269D5 /* Build configuration list for PBXNativeTarget "TelstraTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034FB30124606A69004269D5 /* Debug */,
+				034FB30224606A69004269D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
