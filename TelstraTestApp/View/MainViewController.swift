@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.themeColor
         setupTableView()
         model.getResponceFromAPI()
+        mainTableView.accessibilityIdentifier = "table--mainTableView"
     }
     //setupTableView here
     func setupTableView() {
@@ -59,7 +60,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TTAppConfig.cellIdentifier, for: indexPath) as? CustomTableCell else { return CustomTableCell() }
-        
+        cell.accessibilityIdentifier = "myCell_\(indexPath.row)"
         let currentLastItem = model.listOfArray[indexPath.row]
         cell.setCellInformation(row: currentLastItem)
         cell.selectionStyle = .none
